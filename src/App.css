@@ -1,0 +1,81 @@
+/* Animación para el sidebar */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.sidebar-enter {
+  animation: slideIn 0.3s ease-out;
+}
+
+.sidebar-exit {
+  animation: slideOut 0.3s ease-in;
+}
+
+/* Efecto de movimiento continuo para las imágenes de fondo */
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Aplicando la animación al fondo del Home */
+.parallax-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: moveBackground 30s linear infinite;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/* app.css */
+
+/* Animación de movimiento del fondo */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
